@@ -275,3 +275,8 @@ describe('GET /user' () => {
   });
 });
 ```
+$~$
+
+### Additional Information
+For more information of Supertest usage, see the full documentation in this [link](https://www.npmjs.com/package/supertest) <br/>
+For more information of Jest usage, see all the full documentation in this [link](https://jestjs.io) or use this [cheatsheet](https://devhints.io/jest) instead
