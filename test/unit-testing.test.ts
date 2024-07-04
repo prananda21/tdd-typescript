@@ -1,4 +1,4 @@
-import { sumNumber } from "../src/test";
+import { sumNumber } from "../src/number";
 
 describe("Test file test.ts", () => {
 	it("should have value of sum function", () => {
