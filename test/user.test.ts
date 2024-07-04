@@ -33,4 +33,15 @@ describe("POST /api/users", () => {
 		expect(response.status).toEqual(400);
 		expect(response.body.errors).toBeDefined();
 	});
+
+	it("should reject register new user if user already exist", async () => {
+		await UserTest.add();
+		const response = await supertest(web)
+			.post("/api/users")
+			.send({ name: "test", email: "test@example.com", password: "test" });
+
+		logger.debug(response.body);
+		expect(response.status).toEqual(400);
+		expect(response.body.errors).toBeDefined();
+	});
 });

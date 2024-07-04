@@ -13,4 +13,14 @@ export class UserTest {
 			},
 		});
 	}
+
+	static async add() {
+		await prismaClient.user.create({
+			data: {
+				name: "test",
+				email: "test@example.com",
+				password: "test",
+			},
+		});
+	}
 }
